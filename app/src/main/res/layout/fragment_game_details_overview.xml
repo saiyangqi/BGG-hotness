@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/overview_game_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:contentDescription="@string/game_image"
+            app:layout_constraintBottom_toTopOf="@+id/overview_image_guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/colorAccent" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/overview_image_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="250dp" />
+
+        <TextView
+            android:id="@+id/overview_game_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/overview_playerCount_ic"
+            app:layout_constraintTop_toBottomOf="@id/overview_game_image_view"
+            tools:text="Pandemic Legacy: Season 2" />
+
+        <TextView
+            android:id="@+id/overview_game_year_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/textColorPrimary"
+            app:layout_constraintStart_toStartOf="@id/overview_game_name_tv"
+            app:layout_constraintTop_toBottomOf="@id/overview_game_name_tv"
+            tools:text="2017" />
+
+        <ImageView
+            android:id="@+id/overview_geekRating_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/overview_game_year_tv"
+            app:srcCompat="@drawable/ic_stars_black_24dp" />
+
+        <TextView
+            android:id="@+id/overview_geekRating_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:textColor="@color/textColorPrimary"
+            app:layout_constraintBottom_toBottomOf="@id/overview_geekRating_ic"
+            app:layout_constraintStart_toStartOf="@id/overview_game_name_tv"
+            tools:text="Geek Rating: 8.25"/>
+
+        <ImageView
+            android:id="@+id/overview_avgRating_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/overview_geekRating_ic"
+            app:layout_constraintTop_toBottomOf="@id/overview_geekRating_ic"
+            app:srcCompat="@drawable/ic_whatshot_black_24dp" />
+
+        <TextView
+            android:id="@+id/overview_avgRating_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:textColor="@color/textColorPrimary"
+            app:layout_constraintBottom_toBottomOf="@id/overview_avgRating_ic"
+            app:layout_constraintStart_toStartOf="@id/overview_game_name_tv"
+            tools:text="Community Average Rating: 7.95 (10000 votes)"/>
+
+        <ImageView
+            android:id="@+id/overview_playerCount_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/overview_geekRating_ic"
+            app:layout_constraintTop_toBottomOf="@id/overview_avgRating_ic"
+            app:srcCompat="@drawable/ic_people_black_24dp" />
+
+        <TextView
+            android:id="@+id/overview_playerCount_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:textColor="@color/textColorPrimary"
+            app:layout_constraintBottom_toBottomOf="@id/overview_playerCount_ic"
+            app:layout_constraintStart_toStartOf="@id/overview_game_name_tv"
+            tools:text="1 - 5 players"/>
+
+        <ImageView
+            android:id="@+id/overview_playtime_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/overview_playerCount_ic"
+            app:layout_constraintTop_toBottomOf="@id/overview_playerCount_ic"
+            app:srcCompat="@drawable/ic_timer_black_24dp" />
+
+        <TextView
+            android:id="@+id/overview_playtime_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textColor="@color/textColorPrimary"
+            app:layout_constraintStart_toStartOf="@id/overview_game_name_tv"
+            app:layout_constraintTop_toBottomOf="@id/overview_playerCount_tv"
+            tools:text="90 - 120 minutes"/>
+
+        <ImageView
+            android:id="@+id/overview_minAge_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/overview_playerCount_ic"
+            app:layout_constraintTop_toBottomOf="@id/overview_playtime_ic"
+            app:srcCompat="@drawable/ic_child_care_black_24dp" />
+
+        <TextView
+            android:id="@+id/overview_minAge_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textColor="@color/textColorPrimary"
+            app:layout_constraintStart_toStartOf="@id/overview_game_name_tv"
+            app:layout_constraintTop_toBottomOf="@id/overview_playtime_tv"
+            tools:text="Ages 14+"/>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

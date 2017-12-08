@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">BGG Hotness</string>
+    <string name="title_activity_game_details">Game Details</string>
+    <string name="fragment_overview">Overview</string>
+    <string name="fragment_description">Description</string>
+    <string name="error_msg">Something went wrong. Please check again later.</string>
+    <string name="thumbnail">Board game thumbnail</string>
+    <string name="game_image">Board game image</string>
+
+    <string name="single_player">1 player only</string>
+    <string name="fixed_player_count">%1$d players only</string>
+    <string name="multiple_player_count">%1$d - %2$d players</string>
+
+    <string name="fixed_playtime">%1$d minutes</string>
+    <string name="range_playtime">%1$d - %2$d minutes</string>
+
+    <string name="min_age">Age %1$d+</string>
+
+    <string name="geek_rating">Geek Rating: %1$.2f</string>
+    <string name="avg_rating">Community Average Rating: %1$.2f (%2$d votes)</string>
+    <string name="avg_rating_null">No one has rated this game yet!</string>
+</resources>
