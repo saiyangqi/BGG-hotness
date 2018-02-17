@@ -38,7 +38,8 @@ public class HotnessActivity extends AppCompatActivity implements LoaderManager.
     ProgressBar loadingProgressBar;
     TextView errorMsgTv;
 
-    List<BoardGame> boardGameList;
+    private static List<BoardGame> boardGameList;
+    static int currentItemPosition = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +50,12 @@ public class HotnessActivity extends AppCompatActivity implements LoaderManager.
         loadingProgressBar = findViewById(R.id.hotness_loading_progress_bar);
         errorMsgTv = findViewById(R.id.hotness_error_msg_tv);
 
-        getLoaderManager().initLoader(0, null, this);
+        if (boardGameList != null) {
+            loadingProgressBar.setVisibility(View.GONE);
+            setUpRecyclerView();
+        } else {
+            getLoaderManager().initLoader(0, null, this);
+        }
     }
 
     private void setUpRecyclerView() {
@@ -57,6 +63,7 @@ public class HotnessActivity extends AppCompatActivity implements LoaderManager.
         hotnessListRecyclerView.setHasFixedSize(true);
         hotnessListRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         hotnessListRecyclerView.setAdapter(new HotnessAdapter(boardGameList));
+        hotnessListRecyclerView.scrollToPosition(currentItemPosition);
     }
 
     @Override

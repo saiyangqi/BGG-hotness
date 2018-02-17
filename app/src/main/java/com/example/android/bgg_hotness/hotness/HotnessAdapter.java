@@ -42,7 +42,7 @@ public class HotnessAdapter extends RecyclerView.Adapter<HotnessAdapter.ItemView
     }
 
     @Override
-    public void onBindViewHolder(final ItemViewHolder holder, int position) {
+    public void onBindViewHolder(final ItemViewHolder holder, final int position) {
         BoardGame boardGame = boardGameList.get(position);
         String name = boardGame.getGameName();
         final int id = boardGame.getGameId();
@@ -61,6 +61,7 @@ public class HotnessAdapter extends RecyclerView.Adapter<HotnessAdapter.ItemView
         holder.listItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                HotnessActivity.currentItemPosition = holder.getAdapterPosition();
                 Context context = holder.listItem.getContext();
                 Intent intent = new Intent(context, GameDetailsActivity.class);
                 intent.putExtra(GAME_ID_KEY, id);
